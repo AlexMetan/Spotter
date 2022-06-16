@@ -15,3 +15,12 @@ export const authAPI = {
         return instance.post('auth/auth.php',{userId, token});
     }
 }
+
+export const spotAPI = {
+    getOrders(userId){
+        return instance.post('spot/orders.php',{userId})
+    },
+    getOrderDetails(userId, orderId){
+        return instance.post('spot/order-details.php',{userId, orderId});
+    }
+}

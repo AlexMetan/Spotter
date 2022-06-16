@@ -13,7 +13,16 @@ const appReducer = (state = initialState, action)=>{
             return state;
     }
 }
+
+// ==================
+// Action creators
+// ==================
+
 export const initSuccessAC = () =>({type:INIT_SUCCESS});
+
+// ==================
+// Thunk creators
+// ==================
 
 export const appInitTC = () => dispatch =>{    
     let promise = dispatch(authTC());

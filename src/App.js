@@ -25,7 +25,7 @@ class App extends React.Component {
           <Banner img = {bannerImg} title = "Spotter"/>
           <Routes>
             <Route path="/" element={<Login/>}/>
-            <Route path="/panel" element={<Dashboard/>}/>
+            <Route exact={false} path="/panel/*" element={<Dashboard/>}/>
             <Route path="/registration" element={<Registration/>}/>
 
           </Routes>

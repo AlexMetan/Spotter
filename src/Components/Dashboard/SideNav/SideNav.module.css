@@ -1,0 +1,30 @@
+.SideNav{
+    width: 100%;
+    padding: 10px 0;
+    background-color: #181a20;
+}
+.SideNav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.SideNav ul li{    
+    margin: 0px 10px;
+    text-align: center;
+}
+.SideNav ul li a{
+    color: #fff;
+    padding: 12px 25px;
+    display: block;
+    background-color: #0b0e11;
+    min-width: 140px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.SideNav ul li a[class="active"]{
+    background-color: #fcd535;
+    color: #181a20;
+}

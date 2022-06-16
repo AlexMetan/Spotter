@@ -10,3 +10,9 @@ body {
 section {
   padding: 60px 0;
 }
+a{
+  text-decoration: none;
+}
+.ttu{
+  text-transform: uppercase;
+}

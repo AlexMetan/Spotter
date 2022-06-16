@@ -40,9 +40,17 @@ const authReducer = (state=initialState, action) =>{
 
 export default authReducer;
 
+// ==================
+// Action creators
+// ==================
+
 export const setAuthUserDataAC = (userLogin,userId, token, isAuth) => ({type:SET_USER_DATA, data:{userLogin, userId, token, isAuth }}) ;
 export const setLoginErrorAC = loginError => ({type:SET_LOGIN_ERROR, loginError});
 export const setRegistrationErrorAC = registrationError => ({type:SET_REGISTRATION_ERROR, registrationError});
+
+// ==================
+// Thunk creators
+// ==================
 
 export const authTC = () => { 
     return dispatch =>{

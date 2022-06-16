@@ -2,21 +2,16 @@ import React from "react";
 import { Form, Field } from 'react-final-form';
 import formStyle from './../../../assets/css/Form.module.css';
 
-
-
-
-const validate = () =>{
-
-}
-
 const LoginForm = props =>{
+    
     const required = value => (value ? undefined : 'Field is required');
+
     return(
         <div className={formStyle.myForm + " " + formStyle.loginForm }>
             <h2>Log In</h2>
             <Form
                 onSubmit={props.onSubmit}
-                validate={validate}
+                validate={''}
                 render={({ handleSubmit }) => (
                 <form onSubmit={handleSubmit}>
                     <div>
