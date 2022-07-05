@@ -22,5 +22,17 @@ export const spotAPI = {
     },
     getOrderDetails(userId, orderId){
         return instance.post('spot/order-details.php',{userId, orderId});
+    },
+    newOrder(key, userId, price, amount){
+        return instance.post('spot/add-order.php', {key, userId, price, amount})
+    }
+}
+
+export const userAPI = {
+    getBalance(userId, token){
+        return instance.post('user/get-balance.php', {userId, token});
+    },
+    changeBalance(userId, token, amount, type, isDeposit){
+        return instance.post('user/change-balance.php', {userId, token, amount, type, isDeposit});
     }
 }

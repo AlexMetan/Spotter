@@ -34,9 +34,7 @@ const LoginForm = props =>{
                             )}
                         </Field>   
                     </div>
-
-                  
-                    <button type="submit">Login</button>
+                    <button type="submit" className={formStyle.FormBtn}>Login</button>
                 </form>
                 )}
             />

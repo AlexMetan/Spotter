@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import SpotOrdersContainer from "./SpotOrders/SpotOrdersContainer";
 import Settings from "./Settings/Settings";
 import SpotOrderDetailsContainer from "./SpotOrders/SpotOrderDetails/SpotOrderDetailsContainer";
+import ProfileContainer from "./Profile/ProfileContainer";
 
 const Dashboard = props =>{
 
@@ -16,6 +17,7 @@ const Dashboard = props =>{
         <div>
             <SideNav/>
             <Routes>
+                <Route exact path = "/" element={<ProfileContainer/>}/>
                 <Route exact path = "/spot" element={<SpotOrdersContainer/>}/>
                 <Route path = "/spot/order/:id" element={<SpotOrderDetailsContainer/>}/>
                 <Route path = "/settings" element={<Settings/>}/>

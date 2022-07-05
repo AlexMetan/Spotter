@@ -4,23 +4,21 @@ import s from "./../SpotOrders.module.css";
 import SingleOrderForm from "./SingleOrderForm/SingleOrderForm";
 
 const SpotOrderDetails = props =>{
-
-    const showSingleOrders = () => props.orders.map((order, index)=><SingleOrder key = {index} details = {order} />);
+        const showSingleOrders = () => {
+        return props.orders.items  ? props.orders.items.map((order, index)=><SingleOrder key = {index} details = {order} />) : <h4>No orders</h4>;
+    }
     
-    const currency = props.orders[0] ? props.orders[0].currency : '';
 
     return (
         <section>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6">
-                        <div className={s.SingleOrderForm}>
-                            <SingleOrderForm onSubmit = {props.onSubmit}/>
-                        </div>
+                        <SingleOrderForm onSubmit = {props.onSubmit} orderFormType = {props.orderFormType} setOrderType = {props.setOrderType} currency = {props.orders.currency}/>
                     </div>
                     <div className="col-lg-6">
                         <h2>
-                            <span className="ttu">{currency}</span> / USDT
+                            <span className="ttu">{props.orders.currency}</span> / USDT
                         </h2>
                         {
                             showSingleOrders()

@@ -1,9 +1,11 @@
 .myForm input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
     width: 100%;
     padding: 10px 15px;
     display: block;
     margin-bottom: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     -webkit-appearance: none;
     -moz-appearance: none;
     border: 1px solid #5e6673;
@@ -11,19 +13,11 @@
     color: #eaecef;
     text-align: center;
 }
-.myForm.loginForm{
-    border-radius: 5px;
-    padding: 30px;
-    box-shadow: rgba(0, 0, 0, 0.03) 10px 10px 15px 0px;
-    background-color: #181a20;
-    text-align: center;
-}
-.myForm.loginForm button{
+.FormBtn{
     -webkit-appearance: none;
-    -moz-appearance: none;
     background-color: #fcd535;
-    color: #181a20;
-    letter-spacing: 1px;
+    -moz-appearance: none;
+    color: #333;
     font-weight: 700;
     font-size: 16px;
     padding: 10px 45px;
@@ -34,9 +28,16 @@
     cursor: pointer;
     display: block;
 }
-.myForm.loginForm button:hover,
-.myForm.loginForm button:active{
+button.FormBtn:hover,
+button.FormBtn:active{
     background-color: #f0b90b;
+}
+.myForm.loginForm{
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.03) 10px 10px 15px 0px;
+    background-color: #181a20;
+    text-align: center;
 }
 .formErrorInput{
     background-color: #831c1c;
@@ -50,4 +51,39 @@
 }
 .formSubmitError{
     margin-top: 15px;
+}
+
+.OrderForm{
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #181a20;
+}
+
+button.BuyBtn{
+    background-color: #0eb172;
+    color: #fff;
+}
+button.BuyBtn:hover{
+    background-color: #0a9740;
+    color: #fff;
+}
+button.SellBtn{
+    background-color:#f6465d;
+    color: #fff;
+}
+button.SellBtn:hover{
+    background-color:#c2384b;
+    color: #fff;
+}
+.OrderTypeBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.OrderTypeBtn .FormBtn{
+    margin-bottom: 15px;
+    width: 100%;
+}
+.OrderTypeBtn .FormBtn + .FormBtn{
+    margin-left: 15px;
 }

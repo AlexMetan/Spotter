@@ -1,0 +1,34 @@
+header.mainHeader{
+    padding: 25px 0;
+}
+.mainLogo img{
+    width: 50px;
+}
+.icon{
+    width: 16px;
+}
+.flexAlign{
+    display: flex;
+    height: 100%;
+    align-items: center;   
+    justify-content: flex-end;
+}
+.flexAlign .content{
+    display: flex;
+    align-items: center;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.user img{
+    margin-right: 5px;
+}
+.user img,
+.logout img{
+    width: 25px;
+}
+.logout img{
+    cursor: pointer;
+}

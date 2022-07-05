@@ -3,9 +3,8 @@ import { NavLink } from "react-router-dom";
 import s from "./../SpotOrders.module.css";
 
 const SpotOrderItem = props =>{
-    debugger
     return(
-        <div className="col-lg-4">
+        <div className="col-lg-6">
             <div className={s.OrderItem}>
                 <NavLink to={'./order/' + props.orderId}/>
                 <div>

@@ -9,6 +9,11 @@ const SideNav = () =>{
             <div className="container">
                 <ul>
                     <li>
+                        <NavLink end to="/panel">
+                            Panel
+                        </NavLink>
+                    </li>
+                    <li>
                         <NavLink to="/panel/spot">
                             Spot orders
                         </NavLink>
